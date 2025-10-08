@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Data - Direktori Lembaga Keuangan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .subtitle {
+            margin-top: 10px;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background-color: #2a5298;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .bank-type {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .type-umum {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+        .type-bpr {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+        .type-syariah {
+            background-color: #e8f5e9;
+            color: #388e3c;
+        }
+        .ratio-good {
+            color: #2e7d32;
+            font-weight: 600;
+        }
+        .ratio-warning {
+            color: #f57c00;
+            font-weight: 600;
+        }
+        .ratio-bad {
+            color: #c62828;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Direktori Lembaga Keuangan Indonesia</h1>
+        <div class="subtitle">Data per Oktober 2025 | Sample Data untuk Training FININT</div>
+    </div>
+
+    <div class="note">
+        <strong>⚠️ PERHATIAN:</strong> Ini adalah sample data untuk keperluan training. 
+        Data real dapat diakses melalui portal resmi OJK di <a href="https://www.ojk.go.id" target="_blank">www.ojk.go.id</a>
+    </div>
+
+    <table class="bank-list">
+        <thead>
+            <tr>
+                <th>Nama Lembaga</th>
+                <th>Jenis</th>
+                <th>No. Izin</th>
+                <th>Tanggal Izin</th>
+                <th>NPL (%)</th>
+                <th>CAR (%)</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PT Bank Central Asia Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-015/DIR/1957</td>
+                <td>21 Februari 1957</td>
+                <td class="ratio-good">1.8%</td>
+                <td class="ratio-good">24.5%</td>
+                <td>Menara BCA, Jl. MH Thamrin No.1, Jakarta Pusat</td>
+            </tr>
+            <tr>
+                <td>PT. Bank Mandiri (Persero) Tbk.</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-031/DIR/1998</td>
+                <td>2 Oktober 1998</td>
+                <td class="ratio-good">2.1%</td>
+                <td class="ratio-good">22.8%</td>
+                <td>Plaza Mandiri, Jl. Gatot Subroto Kav. 36-38, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank Rakyat Indonesia Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-012/DIR/1895</td>
+                <td>16 Desember 1895</td>
+                <td class="ratio-good">2.3%</td>
+                <td class="ratio-good">23.1%</td>
+                <td>Gedung BRI 1, Jl. Jend. Sudirman Kav. 44-46, Jakarta Pusat</td>
+            </tr>
+            <tr>
+                <td>Bank BCA</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-015/DIR/1957</td>
+                <td>21 Februari 1957</td>
+                <td class="ratio-good">1.9%</td>
+                <td class="ratio-good">24.3%</td>
+                <td>Jl. MH Thamrin No.1, Jakarta</td>
+            </tr>
+            <tr>
+                <td>PT Bank Negara Indonesia Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-021/DIR/1946</td>
+                <td>5 Juli 1946</td>
+                <td class="ratio-warning">2.8%</td>
+                <td class="ratio-good">20.5%</td>
+                <td>Gedung BNI, Jl. Jend. Sudirman Kav. 1, Jakarta Pusat</td>
+            </tr>
+            <tr>
+                <td>PT Bank Syariah Indonesia Tbk</td>
+                <td><span class="bank-type type-syariah">Bank Syariah</span></td>
+                <td>KEP-048/DIR/2021</td>
+                <td>1 Februari 2021</td>
+                <td class="ratio-good">2.0%</td>
+                <td class="ratio-good">21.7%</td>
+                <td>Gedung Tempo Pavilion 1, Jl. HR Rasuna Said, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank CIMB Niaga Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-029/DIR/1955</td>
+                <td>26 September 1955</td>
+                <td class="ratio-warning">3.1%</td>
+                <td class="ratio-good">19.8%</td>
+                <td>Graha CIMB Niaga, Jl. Jend. Sudirman Kav. 58, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank Danamon Indonesia Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-035/DIR/1956</td>
+                <td>16 Juli 1956</td>
+                <td class="ratio-warning">2.9%</td>
+                <td class="ratio-good">22.3%</td>
+                <td>Menara Bank Danamon, Jl. Prof. Dr. Satrio Kav. 1, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank Permata Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-042/DIR/2002</td>
+                <td>18 Maret 2002</td>
+                <td class="ratio-good">2.5%</td>
+                <td class="ratio-good">20.9%</td>
+                <td>World Trade Centre 1, Jl. Jend. Sudirman Kav. 29-31, Jakarta</td>
+            </tr>
+            <tr>
+                <td>PT Bank OCBC NISP Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-038/DIR/1941</td>
+                <td>4 April 1941</td>
+                <td class="ratio-good">2.2%</td>
+                <td class="ratio-good">23.5%</td>
+                <td>OCBC NISP Tower, Jl. Prof. Dr. Satrio Kav. 25, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank Pembangunan Daerah Jawa Barat</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-051/DIR/1961</td>
+                <td>20 Mei 1961</td>
+                <td class="ratio-warning">3.5%</td>
+                <td class="ratio-good">18.7%</td>
+                <td>Jl. Naripan No. 12-14, Bandung, Jawa Barat</td>
+            </tr>
+            <tr>
+                <td>PT Bank DKI</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-044/DIR/1961</td>
+                <td>11 April 1961</td>
+                <td class="ratio-warning">3.2%</td>
+                <td class="ratio-good">19.2%</td>
+                <td>Gedung Menara Bank DKI, Jl. Ir. H. Juanda III No.7-9, Jakarta Pusat</td>
+            </tr>
+            <tr>
+                <td>PT BPR Sejahtera Artha</td>
+                <td><span class="bank-type type-bpr">BPR</span></td>
+                <td>KEP-245/BPR/2015</td>
+                <td>15 Agustus 2015</td>
+                <td class="ratio-warning">4.2%</td>
+                <td class="ratio-warning">15.3%</td>
+                <td>Jl. Raya Bogor KM 25, Depok, Jawa Barat</td>
+            </tr>
+            <tr>
+                <td>PT BPR Mitra Usaha Rakyat</td>
+                <td><span class="bank-type type-bpr">BPR</span></td>
+                <td>KEP-312/BPR/2018</td>
+                <td>22 November 2018</td>
+                <td class="ratio-bad">5.8%</td>
+                <td class="ratio-warning">14.1%</td>
+                <td>Jl. Gatot Subroto No. 125, Surabaya, Jawa Timur</td>
+            </tr>
+            <tr>
+                <td>PT Bank Muamalat Indonesia Tbk</td>
+                <td><span class="bank-type type-syariah">Bank Syariah</span></td>
+                <td>KEP-056/DIR/1991</td>
+                <td>1 November 1991</td>
+                <td class="ratio-bad">6.2%</td>
+                <td class="ratio-warning">13.8%</td>
+                <td>Gedung Arthaloka, Jl. Jend. Sudirman Kav. 2, Jakarta Pusat</td>
+            </tr>
+            <tr>
+                <td>PT Bank Maybank Indonesia Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-067/DIR/1989</td>
+                <td>6 September 1989</td>
+                <td class="ratio-good">2.7%</td>
+                <td class="ratio-good">21.4%</td>
+                <td>Maybank Tower, Jl. Jend. Sudirman Kav. 23, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank Panin Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-061/DIR/1971</td>
+                <td>17 Agustus 1971</td>
+                <td class="ratio-good">2.4%</td>
+                <td class="ratio-good">22.1%</td>
+                <td>Gedung Panin Centre, Jl. Jend. Sudirman, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank UOB Indonesia</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-072/DIR/1956</td>
+                <td>16 April 1956</td>
+                <td class="ratio-good">1.9%</td>
+                <td class="ratio-good">25.2%</td>
+                <td>UOB Plaza, Jl. MH Thamrin No. 10, Jakarta Pusat</td>
+            </tr>
+            <tr>
+                <td>PT Bank Mega Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-078/DIR/1969</td>
+                <td>15 April 1969</td>
+                <td class="ratio-warning">3.4%</td>
+                <td class="ratio-good">19.5%</td>
+                <td>Menara Bank Mega, Jl. Kapten Tendean Kav. 12-14A, Jakarta Selatan</td>
+            </tr>
+            <tr>
+                <td>PT Bank Sinarmas Tbk</td>
+                <td><span class="bank-type type-umum">Bank Umum</span></td>
+                <td>KEP-083/DIR/1989</td>
+                <td>8 September 1989</td>
+                <td class="ratio-warning">3.7%</td>
+                <td class="ratio-good">18.9%</td>
+                <td>Plaza BII Menara 2, Jl. MH Thamrin No. 51, Jakarta Pusat</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note" style="margin-top: 30px; background: #e3f2fd; border-left-color: #1976d2;">
+        <strong>📝 Catatan untuk Latihan:</strong>
+        <ul style="margin: 10px 0 0 0; padding-left: 20px;">
+            <li>Perhatikan ada data duplikat: "PT Bank Central Asia Tbk" dan "Bank BCA" (baris 1 dan 4)</li>
+            <li>Ada variasi format nama: "PT.", "PT", "(Persero)", "Tbk", "Tbk."</li>
+            <li>Beberapa bank memiliki NPL dan CAR yang perlu dimonitor (warna orange dan merah)</li>
+            <li>Data ini dapat digunakan untuk latihan: scraping, cleaning, normalisasi, dan fuzzy matching</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p><strong>Sample Data untuk Training Financial Intelligence</strong></p>
+        <p>Kementerian Keuangan Republik Indonesia</p>
+        <p style="font-size: 11px; color: #999; margin-top: 10px;">
+            Data ini dibuat untuk keperluan training dan tidak merepresentasikan data actual.<br>
+            Untuk data resmi, silakan akses portal OJK atau Bank Indonesia.
+        </p>
+    </div>
+
+    <!-- Data dalam JSON format untuk kemudahan parsing -->
+    <script type="application/json" id="json-data">
+    {
+        "metadata": {
+            "source": "Sample Training Data",
+            "date": "2025-10-08",
+            "version": "1.0"
+        },
+        "banks": [
+            {
+                "nama": "PT Bank Central Asia Tbk",
+                "jenis": "Bank Umum",
+                "izin": "KEP-015/DIR/1957",
+                "tanggal_izin": "1957-02-21",
+                "npl": 1.8,
+                "car": 24.5,
+                "alamat": "Menara BCA, Jl. MH Thamrin No.1, Jakarta Pusat"
+            },
+            {
+                "nama": "PT. Bank Mandiri (Persero) Tbk.",
+                "jenis": "Bank Umum",
+                "izin": "KEP-031/DIR/1998",
+                "tanggal_izin": "1998-10-02",
+                "npl": 2.1,
+                "car": 22.8,
+                "alamat": "Plaza Mandiri, Jl. Gatot Subroto Kav. 36-38, Jakarta Selatan"
+            },
+            {
+                "nama": "PT Bank Rakyat Indonesia Tbk",
+                "jenis": "Bank Umum",
+                "izin": "KEP-012/DIR/1895",
+                "tanggal_izin": "1895-12-16",
+                "npl": 2.3,
+                "car": 23.1,
+                "alamat": "Gedung BRI 1, Jl. Jend. Sudirman Kav. 44-46, Jakarta Pusat"
+            },
+            {
+                "nama": "Bank BCA",
+                "jenis": "Bank Umum",
+                "izin": "KEP-015/DIR/1957",
+                "tanggal_izin": "1957-02-21",
+                "npl": 1.9,
+                "car": 24.3,
+                "alamat": "Jl. MH Thamrin No.1, Jakarta"
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
